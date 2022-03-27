@@ -1,0 +1,31 @@
+.productcontainer {
+  position: relative;
+  width: 300px;
+  height: 508px;
+  border: 1px solid #cac9c9;
+  border-radius: 8px;
+}
+.productcontainer img {
+  width: 286px;
+  height: 286px;
+  margin-left: 7px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.btn {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  bottom: 0%;
+  background: #ffe0b3;
+  border: 1px solid #95a0a7;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+}
+.productcontainer h4,
+p {
+  margin-left: 7px;
+}
+.btn:hover {
+  background: #da8c9f;
+}

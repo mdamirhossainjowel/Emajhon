@@ -1,0 +1,17 @@
+.wishlist {
+  display: flex;
+  border: 1px solid aliceblue;
+  background-color: white;
+  margin-bottom: 5px;
+}
+.imageContainer {
+  height: 100px;
+  width: 100px;
+}
+.imageContainer img {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+  padding-top: 7px;
+  padding-left: 7px;
+}

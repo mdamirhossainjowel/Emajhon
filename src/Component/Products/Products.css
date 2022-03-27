@@ -1,0 +1,24 @@
+.productcart {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.Productcontainer {
+  margin-top: 15px;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+}
+.cartcontainer {
+  background-color: #ffe0b3;
+}
+.cart-info {
+  position: sticky;
+  margin-top: 2px;
+  margin-left: 15px;
+}
+.buttonChoose {
+  height: 50px;
+  width: 200px;
+  background-color: cyan;
+}
