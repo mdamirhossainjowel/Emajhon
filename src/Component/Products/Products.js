@@ -15,11 +15,12 @@ const Products = () => {
   }, []);
   const AddtoCartHandler = (Selected) => {
     const exist = selectedProducts.find((prod) => prod.id === Selected.id);
+    const exist1 = wishlist.find((prod) => prod.id === Selected.id);
     if (selectedProducts.length === 4) {
       alert("You Can't Add More");
       return false;
     } else {
-      if (!exist) {
+      if (!exist && !exist1) {
         const newSeleceted = [...selectedProducts, Selected];
         setSelectedProductrs(newSeleceted);
       }
@@ -30,8 +31,6 @@ const Products = () => {
     const random = parseInt(
       Math.floor(Math.random() * selectedProducts.length)
     );
-
-    // console.log(selectedProducts[random]);
 
     setWishlist(selectedProducts[random]);
   };
