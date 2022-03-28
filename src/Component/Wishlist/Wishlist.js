@@ -1,12 +1,12 @@
 import React from "react";
 import "./Wishlist.css";
-const Wishlist = (props) => {
+const Wishlist = ({ selected }) => {
   return (
     <div className="wishlist">
       <div className="imageContainer">
-        <img src={props.selected.img} alt="" />
+        <img src={selected.img} alt="" />
       </div>
-      <h3>{props.selected.name}</h3>
+      <h3>{selected.name}</h3>
     </div>
   );
 };

@@ -14,15 +14,23 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
   const AddtoCartHandler = (Selected) => {
-    const newSeleceted = [...selectedProducts, Selected];
-    setSelectedProductrs(newSeleceted);
+    const exist = selectedProducts.find((prod) => prod.id === Selected.id);
+    if (selectedProducts.length === 4) {
+      alert("You Can't Add More");
+      return false;
+    } else {
+      if (!exist) {
+        const newSeleceted = [...selectedProducts, Selected];
+        setSelectedProductrs(newSeleceted);
+      }
+    }
   };
   const chooseForme = () => {
     setSelectedProductrs([]);
     const random = parseInt(
       Math.floor(Math.random() * selectedProducts.length)
     );
-    console.log(random);
+
     // console.log(selectedProducts[random]);
 
     setWishlist(selectedProducts[random]);
@@ -55,7 +63,11 @@ const Products = () => {
             ))}
           </div>
           <div>
-            <Wishlist key={wishlist.id} selected={wishlist}></Wishlist>
+            {wishlist.length === 0 ? (
+              ""
+            ) : (
+              <Wishlist key={wishlist.id} selected={wishlist}></Wishlist>
+            )}
           </div>
           <button onClick={() => chooseForme()} className="buttonChoose">
             Choose 1 for me
